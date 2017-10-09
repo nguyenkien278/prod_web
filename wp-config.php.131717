@@ -1,0 +1,97 @@
+<?php
+/**
+ * The base configurations of the WordPress.
+ *
+ * This file has the following configurations: MySQL settings, Table Prefix,
+ * Secret Keys, and ABSPATH. You can find more information by visiting
+ * {@link https://codex.wordpress.org/Editing_wp-config.php Editing wp-config.php}
+ * Codex page. You can get the MySQL settings from your web host.
+ *
+ * This file is used by the wp-config.php creation script during the
+ * installation. You don't have to use the web site, you can just copy this file
+ * to "wp-config.php" and fill in the values.
+ *
+ * @package WordPress
+ */
+
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+define('WP_CACHE', true); //Added by WP-Cache Manager
+define( 'WPCACHEHOME', '/home/jmangovn/web-prod/web-site-360/2015/wp-content/plugins/wp-super-cache/' ); //Added by WP-Cache Manager
+define('DB_NAME', 'website2015');
+
+/** MySQL database username */
+define('DB_USER', 'web_prod');
+
+/** MySQL database password */
+define('DB_PASSWORD', 'web_prod@81');
+
+/** MySQL hostname */
+define('DB_HOST', '127.0.0.1');
+
+/** Database Charset to use in creating database tables. */
+define('DB_CHARSET', 'utf8mb4');
+
+/** The Database Collate type. Don't change this if in doubt. */
+define('DB_COLLATE', '');
+
+/**#@+
+ * Authentication Unique Keys and Salts.
+ *
+ * Change these to different unique phrases!
+ * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
+ * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
+ *
+ * @since 2.6.0
+ */
+define('AUTH_KEY',         '#N$lS/%pK-arAY|+:BHCR5K^ BKcA#},|BB[jnEo]V(T/3fv-D.)v/~CJ3XWIt,R');
+define('SECURE_AUTH_KEY',  '-M5>:k/?FUKuEpK89>>!A|8jTSuz}s6HfzASeUh!G~IYFNg$dm>RE^.N,f.h$]N*');
+define('LOGGED_IN_KEY',    'k-Mw==2LgJKH*17t_7$UQMQz^wccti*qo{<jC=TF|.oSju0D@lD>_a@>Ag??NS$y');
+define('NONCE_KEY',        'tTFi8*Gydh|=uP5-@ZQphc9Q,!.d[T^7E8*pU(*o9PabV~d[qisRVJAbbXkWr#Cn');
+define('AUTH_SALT',        'QC}/e24{tHUK.n?-wo(rv9@aaz,H`kz^{a`=^U{kT8K7O,LeM8p(A1>)&3]K?+Bi');
+define('SECURE_AUTH_SALT', 'TaNyM$,%`4y{4dyDubZQ7Xj_:r;p+@<2F+_LJH1c}+ys2,1Y|;|=/Yb|^^8d~B5T');
+define('LOGGED_IN_SALT',   'ba _A(t~-.~eBsUf=[U-zk{]hTFKV||P&u+J|M|m@m@J<AiD,T2K]w_oz{X:}53[');
+define('NONCE_SALT',       'rtq{HjT5g:v|c7?vn28V-}Id8Ja,]V1k2J5AU=2tH&[$NV@Nf6u8vDB%!&@3mH+e');
+
+// zoho configuration
+define('ZOHO_CRM_LEAD_SOURCE_PARTNER',		'Reseller');
+define('ZOHO_CRM_LEAD_SOURCE_WEB_CASES',	'Webform');
+define('ZOHO_TOKEN_KEY',       				'c6e748ef7aec85c3aaa98fd0b777e073');
+define('ENTITY_ZOHO_CRM',       			'Leads');
+define('ENTITY_ZOHO_CRM_CHECK_DUPLICATE',	'email');
+define('ZOHO_CRM_CREATE_API',       		'https://crm.zoho.com/crm/private/xml/'.ENTITY_ZOHO_CRM.'/insertRecords');
+define('ZOHO_CRM_SEARCH_API',       		'https://crm.zoho.com/crm/private/json/'.ENTITY_ZOHO_CRM.'/getSearchRecordsByPDC');
+
+/**#@-*/
+
+/**
+ * WordPress Database Table prefix.
+ *
+ * You can have multiple installations in one database if you give each a unique
+ * prefix. Only numbers, letters, and underscores please!
+ */
+$table_prefix  = 'wp_';
+
+/**
+ * For developers: WordPress debugging mode.
+ *
+ * Change this to true to enable the display of notices during development.
+ * It is strongly recommended that plugin and theme developers use WP_DEBUG
+ * in their development environments.
+ */
+ini_set('log_errors','On');
+ini_set('display_errors','Off');
+ini_set('error_reporting', E_ALL );
+define('WP_DEBUG', false);
+define('WP_DEBUG_LOG', true);
+define('WP_DEBUG_DISPLAY', false);
+define('WP_MEMORY_LIMIT', '256M');
+define( 'WP_MAX_MEMORY_LIMIT', '256M' );
+/* That's all, stop editing! Happy blogging. */
+
+/** Absolute path to the WordPress directory. */
+if ( !defined('ABSPATH') )
+	define('ABSPATH', dirname(__FILE__) . '/');
+
+/** Sets up WordPress vars and included files. */
+require_once(ABSPATH . 'wp-settings.php');

@@ -1,0 +1,7 @@
+wp-includes/formatting.php
+wp-includes/class.wp-scripts.php
+wp-content/plugins/google-analytics-dashboard-for-wp/front/tracking.php
+wp-content/plugins/revslider/inc_php/revslider_output.class.php
+wp-content/plugins/autoptimize/classes/autoptimizeStyles.php
+wp-content/plugins/sitepress-multilingual-cms/inc/language-switcher.php
+wp-content/plugins/contact-form-7/includes/js/scripts.js

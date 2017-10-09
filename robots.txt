@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /wp-admin
+Disallow: /wp-includes
+Disallow: /wp-content/cache
+Disallow: /backup
+Disallow: /configuration
+Sitemap: https://jmango360.com/sitemap.xml
